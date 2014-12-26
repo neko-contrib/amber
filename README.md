@@ -1,4 +1,5 @@
 #Amber Render
+[![wercker status](https://app.wercker.com/status/c07fe78bf500083f3046992b1daba6ba/s "wercker status")](https://app.wercker.com/project/bykey/c07fe78bf500083f3046992b1daba6ba)
 [![GoDoc](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](https://godoc.org/github.com/neko-contrib/amber)
 
 [Amber](https://github.com/eknkc/amber) template for [Neko](https://github.com/rocwong/neko).
@@ -11,8 +12,11 @@
       "github.com/neko-contrib/amber"
       "github.com/rocwong/neko"
   )
+
   app := neko.Classic()
-  app.Use(amber.Renderer(&amber.Options{BaseDir: "core/views", Extension: ".amber", PrettyPrint: true}))
+  //default: Options{BaseDir: "views", Extension: ".amber", PrettyPrint: true}
+  //app.Use(amber.Renderer())
+  app.Use(amber.Renderer(&amber.Options{BaseDir: "template", Extension: ".jade", PrettyPrint: true}))
   app.Run(":3000")
 ~~~
 
