@@ -1,0 +1,3 @@
+extends layout.amber
+block content
+  div #{Name} - #{Age}
