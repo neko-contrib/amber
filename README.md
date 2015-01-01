@@ -1,6 +1,7 @@
 #Amber Render
 [![wercker status](https://app.wercker.com/status/c07fe78bf500083f3046992b1daba6ba/s "wercker status")](https://app.wercker.com/project/bykey/c07fe78bf500083f3046992b1daba6ba)
 [![GoDoc](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](https://godoc.org/github.com/neko-contrib/amber)
+[![GoCover](http://gocover.io/_badge/github.com/neko-contrib/amber)](http://gocover.io/github.com/neko-contrib/amber)
 
 [Amber](https://github.com/eknkc/amber) template for [Neko](https://github.com/rocwong/neko).
 
