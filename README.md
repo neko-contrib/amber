@@ -7,33 +7,34 @@
 
 ## Usage
 ~~~go
-  package main
-  
-  import (
-      "github.com/neko-contrib/amber"
-      "github.com/rocwong/neko"
-  )
+package main
 
+import (
+  "github.com/neko-contrib/amber"
+  "github.com/rocwong/neko"
+)
+func main() {
   app := neko.Classic()
   //default: Options{BaseDir: "views", Extension: ".amber", PrettyPrint: true}
   //app.Use(amber.Renderer())
   app.Use(amber.Renderer(&amber.Options{BaseDir: "template", Extension: ".jade", PrettyPrint: true}))
   app.Run(":3000")
+}
 ~~~
 
 ####type Options
 ~~~go
-  type Options struct {
-    // BaseDir represents a base directory of the amber templates.
-    BaseDir string
-    // Extension represents an extension of files.
-    Extension string
-    // Setting if pretty printing is enabled.
-    // Pretty printing ensures that the output html is properly indented and in human readable form.
-    // If disabled, produced HTML is compact. This might be more suitable in production environments.
-    // Default: true
-    PrettyPrint bool
-  }
+type Options struct {
+  // BaseDir represents a base directory of the amber templates.
+  BaseDir string
+  // Extension represents an extension of files.
+  Extension string
+  // Setting if pretty printing is enabled.
+  // Pretty printing ensures that the output html is properly indented and in human readable form.
+  // If disabled, produced HTML is compact. This might be more suitable in production environments.
+  // Default: true
+  PrettyPrint bool
+}
 ~~~
 
 
